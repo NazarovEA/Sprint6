@@ -39,6 +39,6 @@
 //        driver.findElement(By.xpath(".//button[@class='auth-form__button']")).click();
 
 
-import org.openqa.selenium.By;
-private By signInButton = By.class("Button_Button__ra12g");
-private nameField = By.class("Input_Input__1iN_Z Input_Error__1Tx5d Input_Responsible__1jDKN");
+//import org.openqa.selenium.By;
+//private By signInButton = By.class("Button_Button__ra12g");
+//private nameField = By.class("Input_Input__1iN_Z Input_Error__1Tx5d Input_Responsible__1jDKN");
