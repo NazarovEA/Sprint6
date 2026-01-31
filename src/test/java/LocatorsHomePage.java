@@ -1,9 +1,10 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class LocatorsHomePage {
     private WebDriver driver;
-
 
 // Вопрос1. Сколько это стоит? И как оплатить?
     private final By question1 = By.xpath(".//div[@class = 'accordion__heading-24']");
@@ -14,7 +15,6 @@ public class LocatorsHomePage {
 // Текст ответа getText
     public String getAnswer1() {return driver.findElement(answer1).getText();}
     public static final String text1 = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
-
 
 // Вопрос2.Хочу сразу несколько самокатов! Так можно?
     private final By question2 = By.xpath(".//div[@class = 'accordion__heading-25']");
@@ -85,6 +85,47 @@ private final By question8 = By.xpath(".//div[@class = 'accordion__heading-31']"
     // Текст ответа getText
     public String getAnswer8() {return driver.findElement(answer8).getText();}
     public static final String text8 = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
+
+    // метод проверяет текст ответа1
+    public void checkTextAnswer1() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer1).getText());
+    }
+
+    // метод проверяет текст ответа2
+    public void checkTextAnswer2() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer2).getText());
+    }
+
+    // метод проверяет текст ответа3
+    public void checkTextAnswer3() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer3).getText());
+    }
+
+    // метод проверяет текст ответа4
+    public void checkTextAnswer4() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer4).getText());
+    }
+
+    // метод проверяет текст ответа5
+    public void checkTextAnswer5() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer5).getText());
+    }
+
+    // метод проверяет текст ответа6
+    public void checkTextAnswer6() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer6).getText());
+    }
+
+    // метод проверяет текст ответа7
+    public void checkTextAnswer7() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer7).getText());
+    }
+
+    // метод проверяет текст ответа8
+    public void checkTextAnswer8() {
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer8).getText());
+    }
+
 }
 
 // Главная страница
