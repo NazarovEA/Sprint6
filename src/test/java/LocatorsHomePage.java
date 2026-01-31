@@ -6,23 +6,41 @@ public class LocatorsHomePage {
 
 
 // Вопрос1. Сколько это стоит? И как оплатить?
-    private final By question = By.xpath(".//div[@class = 'accordion__heading-24']");
+    private final By question1 = By.xpath(".//div[@class = 'accordion__heading-24']");
 // Нажать на вопрос
-    public void questionClick(){driver.findElement(question).click();}
+    public void question1Click(){driver.findElement(question1).click();}
 // Ответ1. Сутки — 400 рублей. Оплата курьеру — наличными или картой.
-    private By  answer = By.id("accordion__panel-24");
+    private By  answer1 = By.id("accordion__panel-24");
 // Текст ответа getText
-    public String getAnswer() {return driver.findElement(answer).getText();}
+    public String getAnswer1() {return driver.findElement(answer1).getText();}
 
 
+// Вопрос2.Хочу сразу несколько самокатов! Так можно?
+    private final By question2 = By.xpath(".//div[@class = 'accordion__heading-25']");
+// Нажать на вопрос
+    public void question2Click(){driver.findElement(question2).click();}
+// Ответ2. Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим..
+    private By  answer2 = By.id("accordion__panel-25");
+// Текст ответа getText
+    public String getAnswer2() {return driver.findElement(answer2).getText();}
 
-// 2.Хочу сразу несколько самокатов! Так можно?
-// 3.Как рассчитывается время аренды?
-// 4.Можно ли заказать самокат прямо на сегодня?
-// 5.Можно ли продлить заказ или вернуть самокат раньше?
-// 6.Вы привозите зарядку вместе с самокатом?
-// 7.Можно ли отменить заказ?
-// 8.Я жизу за МКАДом, привезёте?
+
+// Вопрос3.Как рассчитывается время аренды?
+private final By question3 = By.xpath(".//div[@class = 'accordion__heading-26']");
+// Нажать на вопрос
+    public void question3Click(){driver.findElement(question3).click();}
+// Ответ3.
+    private By  answer3 = By.id("accordion__panel-26");
+// Текст ответа getText
+    public String getAnswer3() {return driver.findElement(answer3).getText();}
+
+
+// Вопрос4.Можно ли заказать самокат прямо на сегодня?
+
+// Вопрос5.Можно ли продлить заказ или вернуть самокат раньше?
+// Вопрос6.Вы привозите зарядку вместе с самокатом?
+// Вопрос7.Можно ли отменить заказ?
+// Вопрос8.Я жизу за МКАДом, привезёте?
 }
 
 // Главная страница
