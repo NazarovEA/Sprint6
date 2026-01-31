@@ -8,7 +8,11 @@ public class LocatorsHomePage {
 
 // Вопрос1. Сколько это стоит? И как оплатить?
     private final By question1 = By.xpath(".//div[@class = 'accordion__heading-24']");
-// Нажать на вопрос
+
+    public LocatorsHomePage(WebDriver driver) {
+    }
+
+    // Нажать на вопрос
     public void question1Click(){driver.findElement(question1).click();}
 // Ответ1. Сутки — 400 рублей. Оплата курьеру — наличными или картой.
     private By  answer1 = By.id("accordion__panel-24");
@@ -88,7 +92,7 @@ private final By question8 = By.xpath(".//div[@class = 'accordion__heading-31']"
 
     // метод проверяет текст ответа1
     public void checkTextAnswer1() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer1).getText());
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer1).getText());
     }
 
     // метод проверяет текст ответа2
@@ -126,6 +130,8 @@ private final By question8 = By.xpath(".//div[@class = 'accordion__heading-31']"
         assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer8).getText());
     }
 
+    public void checkTextAnswer1(String answer1, String text1) {
+    }
 }
 
 // Главная страница
