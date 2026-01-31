@@ -26,7 +26,7 @@ public class LocatorsHomePage {
 
 
 // Вопрос3.Как рассчитывается время аренды?
-private final By question3 = By.xpath(".//div[@class = 'accordion__heading-26']");
+   private final By question3 = By.xpath(".//div[@class = 'accordion__heading-26']");
 // Нажать на вопрос
     public void question3Click(){driver.findElement(question3).click();}
 // Ответ3.
@@ -36,11 +36,53 @@ private final By question3 = By.xpath(".//div[@class = 'accordion__heading-26']"
 
 
 // Вопрос4.Можно ли заказать самокат прямо на сегодня?
+    private final By question4 = By.xpath(".//div[@class = 'accordion__heading-27']");
+    // Нажать на вопрос
+    public void question4Click(){driver.findElement(question4).click();}
+    // Ответ3.
+    private By  answer4 = By.id("accordion__panel-27");
+    // Текст ответа getText
+    public String getAnswer4() {return driver.findElement(answer4).getText();}
+
 
 // Вопрос5.Можно ли продлить заказ или вернуть самокат раньше?
+private final By question5 = By.xpath(".//div[@class = 'accordion__heading-28']");
+    // Нажать на вопрос
+    public void question5Click(){driver.findElement(question5).click();}
+    // Ответ3.
+    private By  answer5 = By.id("accordion__panel-28");
+    // Текст ответа getText
+    public String getAnswer5() {return driver.findElement(answer5).getText();}
+
+
 // Вопрос6.Вы привозите зарядку вместе с самокатом?
+private final By question6 = By.xpath(".//div[@class = 'accordion__heading-29']");
+    // Нажать на вопрос
+    public void question6Click(){driver.findElement(question6).click();}
+    // Ответ3.
+    private By  answer6 = By.id("accordion__panel-29");
+    // Текст ответа getText
+    public String getAnswer6() {return driver.findElement(answer6).getText();}
+
+
 // Вопрос7.Можно ли отменить заказ?
+private final By question7 = By.xpath(".//div[@class = 'accordion__heading-30']");
+    // Нажать на вопрос
+    public void question7Click(){driver.findElement(question7).click();}
+    // Ответ3.
+    private By  answer7 = By.id("accordion__panel-30");
+    // Текст ответа getText
+    public String getAnswer7() {return driver.findElement(answer7).getText();}
+
+
 // Вопрос8.Я жизу за МКАДом, привезёте?
+private final By question8 = By.xpath(".//div[@class = 'accordion__heading-31']");
+    // Нажать на вопрос
+    public void question8Click(){driver.findElement(question8).click();}
+    // Ответ3.
+    private By  answer8 = By.id("accordion__panel-31");
+    // Текст ответа getText
+    public String getAnswer8() {return driver.findElement(answer8).getText();}
 }
 
 // Главная страница
