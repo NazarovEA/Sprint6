@@ -26,7 +26,35 @@ public class HomePageTest {
 
         // Cоответствие текста ответа1.
         objHomePage.question1Click();
-        objHomePage.checkTextAnswer1(objHomePage.getAnswer1(), LocatorsHomePage.text1);
+        objHomePage.checkTextAnswer1();
+
+        // Cоответствие текста ответа2.
+        objHomePage.question2Click();
+        objHomePage.checkTextAnswer2();
+
+        // Cоответствие текста ответа3.
+        objHomePage.question3Click();
+        objHomePage.checkTextAnswer3();
+
+        // Cоответствие текста ответа4.
+        objHomePage.question4Click();
+        objHomePage.checkTextAnswer4();
+
+        // Cоответствие текста ответа5.
+        objHomePage.question5Click();
+        objHomePage.checkTextAnswer5();
+
+        // Cоответствие текста ответа6.
+        objHomePage.question6Click();
+        objHomePage.checkTextAnswer6();
+
+        // Cоответствие текста ответа7.
+        objHomePage.question7Click();
+        objHomePage.checkTextAnswer7();
+
+        // Cоответствие текста ответа8.
+        objHomePage.question7Click();
+        objHomePage.checkTextAnswer7();
     }
         @After
         public void teardown() {

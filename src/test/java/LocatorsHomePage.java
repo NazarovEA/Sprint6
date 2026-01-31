@@ -97,27 +97,27 @@ private final By question8 = By.xpath(".//div[@class = 'accordion__heading-31']"
 
     // метод проверяет текст ответа2
     public void checkTextAnswer2() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer2).getText());
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer2).getText());
     }
 
     // метод проверяет текст ответа3
     public void checkTextAnswer3() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer3).getText());
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer3).getText());
     }
 
     // метод проверяет текст ответа4
     public void checkTextAnswer4() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer4).getText());
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer4).getText());
     }
 
     // метод проверяет текст ответа5
     public void checkTextAnswer5() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer5).getText());
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer5).getText());
     }
 
     // метод проверяет текст ответа6
     public void checkTextAnswer6() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer6).getText());
+        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer6).getText());
     }
 
     // метод проверяет текст ответа7
