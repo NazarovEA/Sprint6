@@ -55,6 +55,7 @@ public class HomePageTest {
         // Cоответствие текста ответа8.
         objHomePage.question7Click();
         objHomePage.checkTextAnswer7();
+
     }
         @After
         public void teardown() {
