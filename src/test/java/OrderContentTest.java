@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -67,5 +68,9 @@ public class OrderContentTest {
         objOrderPage.getComment(comment);
         objOrderPage.clickButtonOrder();
         objOrderPage.clickOrderYesButton();
+    }
+    @After
+    public void teardown() {
+        driver.quit();
     }
 }
