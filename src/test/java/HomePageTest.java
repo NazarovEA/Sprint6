@@ -22,6 +22,19 @@ public class HomePageTest {
         WebElement element = driver.findElement(By.cssSelector(".accordion"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         // Объект класса HomePage
+        LocatorsHomePage objHomePage = getLocatorsHomePage();
+
+        // Cоответствие текста ответа7.
+        objHomePage.question7Click();
+        objHomePage.checkTextAnswer7();
+
+        // Cоответствие текста ответа8.
+        objHomePage.question7Click();
+        objHomePage.checkTextAnswer7();
+
+    }
+
+    private LocatorsHomePage getLocatorsHomePage() {
         LocatorsHomePage objHomePage = new LocatorsHomePage(driver);
 
         // Cоответствие текста ответа1.
@@ -47,17 +60,10 @@ public class HomePageTest {
         // Cоответствие текста ответа6.
         objHomePage.question6Click();
         objHomePage.checkTextAnswer6();
-
-        // Cоответствие текста ответа7.
-        objHomePage.question7Click();
-        objHomePage.checkTextAnswer7();
-
-        // Cоответствие текста ответа8.
-        objHomePage.question7Click();
-        objHomePage.checkTextAnswer7();
-
+        return objHomePage;
     }
-        @After
+
+    @After
         public void teardown() {
             driver.quit();
     }
