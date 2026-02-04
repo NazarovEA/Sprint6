@@ -1,3 +1,5 @@
+package PageObject;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,6 +10,7 @@ public class LocatorsHomePage {
 
     // Вопрос1. Сколько это стоит? И как оплатить?
     private final By question1 = By.xpath(".//div[@class = 'accordion__heading-24']");
+
 
     public LocatorsHomePage(WebDriver driver) {
     }
@@ -71,7 +74,7 @@ public class LocatorsHomePage {
         driver.findElement(question4).click();
     }
 
-    // Ответ3.
+    // Ответ4.
     private By answer4 = By.id("accordion__panel-27");
 
     // Текст ответа getText
@@ -89,7 +92,7 @@ public class LocatorsHomePage {
         driver.findElement(question5).click();
     }
 
-    // Ответ3.
+    // Ответ5.
     private By answer5 = By.id("accordion__panel-28");
 
     // Текст ответа getText
@@ -107,7 +110,7 @@ public class LocatorsHomePage {
         driver.findElement(question6).click();
     }
 
-    // Ответ3.
+    // Ответ6.
     private By answer6 = By.id("accordion__panel-29");
 
     // Текст ответа getText
@@ -125,7 +128,7 @@ public class LocatorsHomePage {
         driver.findElement(question7).click();
     }
 
-    // Ответ3.
+    // Ответ7.
     private By answer7 = By.id("accordion__panel-30");
 
     // Текст ответа getText
@@ -143,7 +146,7 @@ public class LocatorsHomePage {
         driver.findElement(question8).click();
     }
 
-    // Ответ3.
+    // Ответ8.
     private By answer8 = By.id("accordion__panel-31");
 
     // Текст ответа getText
@@ -155,42 +158,42 @@ public class LocatorsHomePage {
 
     // метод проверяет текст ответа1
     public void checkTextAnswer1() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer1).getText());
+        assertEquals("Сутки — 400 рублей. Оплата курьеру — наличными или картой.", text1, driver.findElement(this.answer1).getText());
     }
 
     // метод проверяет текст ответа2
     public void checkTextAnswer2() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer2).getText());
+        assertEquals("Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.", text2, driver.findElement(this.answer2).getText());
     }
 
     // метод проверяет текст ответа3
     public void checkTextAnswer3() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer3).getText());
+        assertEquals("Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.", text3, driver.findElement(this.answer3).getText());
     }
 
     // метод проверяет текст ответа4
     public void checkTextAnswer4() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer4).getText());
+        assertEquals("Только начиная с завтрашнего дня. Но скоро станем расторопнее.", text4, driver.findElement(this.answer4).getText());
     }
 
     // метод проверяет текст ответа5
     public void checkTextAnswer5() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer5).getText());
+        assertEquals("Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.", text5, driver.findElement(this.answer5).getText());
     }
 
     // метод проверяет текст ответа6
     public void checkTextAnswer6() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(this.answer6).getText());
+        assertEquals("Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.", text6, driver.findElement(this.answer6).getText());
     }
 
     // метод проверяет текст ответа7
     public void checkTextAnswer7() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer7).getText());
+        assertEquals("Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.", text7, driver.findElement(answer7).getText());
     }
 
     // метод проверяет текст ответа8
     public void checkTextAnswer8() {
-        assertEquals("Текст кнопки не соответствует", "Регистрация", driver.findElement(answer8).getText());
+        assertEquals("Да, обязательно. Всем самокатов! И Москве, и Московской области.", text8, driver.findElement(answer8).getText());
     }
 
     public void checkTextAnswer1(String answer1, String text1) {
@@ -203,7 +206,16 @@ public class LocatorsHomePage {
     public void clickOneButton() {
         driver.findElement(oneButton).click();
     }
+
+    // Кнопка вторая заказать
+    private By twoButton = By.xpath(".//div[contains(@class, 'Home_FinishButton')]/button");
+    // Метод клик кнопки заказать
+    public void clickTwoButton() {
+        driver.findElement(twoButton).click();
+    }
 }
+
+
 
 // Главная страница
 // https://qa-scooter.praktikum-services.ru/

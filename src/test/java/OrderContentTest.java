@@ -1,12 +1,14 @@
-import org.junit.After;
+import PageObject.LocatorsHomePage;
+import PageObject.LocatorsOrderPage;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-@RunWith(Parameterized.class)
 public class OrderContentTest {
     private WebDriver driver;
     private final String name;
@@ -30,7 +32,17 @@ public class OrderContentTest {
     this.color = color;
     this.comment = comment;
     }
-    @Parameterized.Parameters
+
+    @BeforeEach
+    void setUp() {// Создаём драйвер для браузера Chrome
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);
+        // Открой страницу тестового стенда
+        driver.get("https://qa-scooter.praktikum-services.ru/");
+    }
+    @ParameterizedTest
+    @MethodSource()
     public static Object[][] getOrder() {
     return new Object[][] {
     {"Сергей", "Шмидт", "г. Москва, ул. Борисовские пруды, д.9", "Каширская", "79639237788", "10.10.2027", "двое суток", "чёрный жемчуг", "Без домофона"},
@@ -39,13 +51,7 @@ public class OrderContentTest {
     }
 
     @Test
-    public void OrderPositiveTest() {
-        // Создаём драйвер для браузера Chrome
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
-        // Открой страницу тестового стенда
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+    public void orderPositiveTest() {
         // Создаем объект класса HomePage
         LocatorsHomePage objHomePage = new LocatorsHomePage(driver);
         // Нажать на первую кнопку Заказать
@@ -69,7 +75,7 @@ public class OrderContentTest {
         objOrderPage.clickButtonOrder();
         objOrderPage.clickOrderYesButton();
     }
-    @After
+    @AfterEach
     public void teardown() {
         driver.quit();
     }
